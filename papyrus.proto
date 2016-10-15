@@ -1,0 +1,128 @@
+message Page {
+    optional Background background = 1;
+    optional Layer layer           = 3;
+}
+
+message Background {
+    enum Type {
+        RuledPaper = 1;
+        QuadPaper  = 2;
+        Blank      = 3;
+        PDF        = 4;
+        Papyr      = 5;
+    }
+    required Type   type   = 1;
+    optional float  width  = 4;
+    optional float  height = 5;
+    optional uint32 color  = 6;
+    optional RuledPaperBackground ruled_paper_background = 1000;
+    optional QuadPaperBackground  quad_paper_background  = 1001;
+    optional BlankBackground      blank_background       = 1002;
+    optional PDFBackground        pdf_background         = 1003;
+    optional PapyrBackground      papyr_background       = 1004;
+}
+
+message RuledPaperBackground {
+    // TODO
+}
+
+message QuadPaperBackground {
+    // TODO
+}
+
+message BlankBackground {
+    // Empty
+}
+
+message PDFBackground {
+    // TODO
+}
+
+message PapyrBackground {
+    // Empty
+}
+
+message Layer {
+    repeated Item item  = 1;
+    optional RectF bounds = 2;
+}
+
+message Rect {
+    optional int32 left   = 1;
+    optional int32 right  = 2;
+    optional int32 top    = 3;
+    optional int32 bottom = 4;
+}
+
+message RectF {
+    optional float left   = 1;
+    optional float right  = 2;
+    optional float top    = 3;
+    optional float bottom = 4;
+}
+
+message Item {
+    enum Type {
+        Stroke = 1;
+        Shape  = 2;
+        Text   = 3;
+        Image  = 4;
+    }
+    required Type   type   = 1;
+    optional Stroke stroke = 1000;
+    optional Shape  shape  = 1001;
+    optional Text   text   = 1002;
+    optional Image  image  = 1003;
+}
+
+message Stroke {
+    enum StrokeType {
+        Normal    = 1;
+        Line      = 2;
+        Highlight = 3;
+        Smooth    = 4;
+    }
+    optional uint32     color             = 1;
+    optional float      weight            = 2;
+    optional Point      reference_point   = 3;
+    repeated Point      point             = 4;
+    optional RectF      bounds            = 5;
+    optional StrokeType stroke_type       = 6;
+    optional RectF      fitted_bounds     = 7;
+}
+
+message Point {
+    optional float x        = 1;
+    optional float y        = 2;
+    optional float pressure = 3;
+}
+
+message Shape {
+    enum ShapeType {
+        Ellipse = 1;
+    }
+    required ShapeType type    = 1;
+    optional Ellipse   ellipse = 1000;
+}
+
+message Ellipse {
+    // TODO
+}
+
+message Text {
+    optional string  text     = 1;
+    optional uint32  color    = 2;
+    optional float   weight   = 3;
+    optional RectF   bounds   = 4;
+    optional int32   version  = 5;
+}
+
+message Image {
+    optional string  id             = 1;
+    optional string  image_hash     = 2;
+    optional RectF   bounds         = 3;
+    optional bool    flip_x         = 4;
+    optional bool    flip_y         = 5;
+    optional Rect    crop_bounds    = 6;
+    optional int32   rotation       = 7;
+}
