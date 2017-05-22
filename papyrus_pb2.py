@@ -18,9 +18,9 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='papyrus.proto',
   package='',
-  serialized_pb=_b('\n\rpapyrus.proto\">\n\x04Page\x12\x1f\n\nbackground\x18\x01 \x01(\x0b\x32\x0b.Background\x12\x15\n\x05layer\x18\x03 \x01(\x0b\x32\x06.Layer\"\x91\x03\n\nBackground\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.Background.Type\x12\r\n\x05width\x18\x04 \x01(\x02\x12\x0e\n\x06height\x18\x05 \x01(\x02\x12\r\n\x05\x63olor\x18\x06 \x01(\r\x12\x36\n\x16ruled_paper_background\x18\xe8\x07 \x01(\x0b\x32\x15.RuledPaperBackground\x12\x34\n\x15quad_paper_background\x18\xe9\x07 \x01(\x0b\x32\x14.QuadPaperBackground\x12+\n\x10\x62lank_background\x18\xea\x07 \x01(\x0b\x32\x10.BlankBackground\x12\'\n\x0epdf_background\x18\xeb\x07 \x01(\x0b\x32\x0e.PDFBackground\x12+\n\x10papyr_background\x18\xec\x07 \x01(\x0b\x32\x10.PapyrBackground\"D\n\x04Type\x12\x0e\n\nRuledPaper\x10\x01\x12\r\n\tQuadPaper\x10\x02\x12\t\n\x05\x42lank\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\t\n\x05Papyr\x10\x05\"\x16\n\x14RuledPaperBackground\"\x15\n\x13QuadPaperBackground\"\x11\n\x0f\x42lankBackground\"\x0f\n\rPDFBackground\"\x11\n\x0fPapyrBackground\"4\n\x05Layer\x12\x13\n\x04item\x18\x01 \x03(\x0b\x32\x05.Item\x12\x16\n\x06\x62ounds\x18\x02 \x01(\x0b\x32\x06.RectF\"@\n\x04Rect\x12\x0c\n\x04left\x18\x01 \x01(\x05\x12\r\n\x05right\x18\x02 \x01(\x05\x12\x0b\n\x03top\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x04 \x01(\x05\"A\n\x05RectF\x12\x0c\n\x04left\x18\x01 \x01(\x02\x12\r\n\x05right\x18\x02 \x01(\x02\x12\x0b\n\x03top\x18\x03 \x01(\x02\x12\x0e\n\x06\x62ottom\x18\x04 \x01(\x02\"\xb4\x01\n\x04Item\x12\x18\n\x04type\x18\x01 \x02(\x0e\x32\n.Item.Type\x12\x18\n\x06stroke\x18\xe8\x07 \x01(\x0b\x32\x07.Stroke\x12\x16\n\x05shape\x18\xe9\x07 \x01(\x0b\x32\x06.Shape\x12\x14\n\x04text\x18\xea\x07 \x01(\x0b\x32\x05.Text\x12\x16\n\x05image\x18\xeb\x07 \x01(\x0b\x32\x06.Image\"2\n\x04Type\x12\n\n\x06Stroke\x10\x01\x12\t\n\x05Shape\x10\x02\x12\x08\n\x04Text\x10\x03\x12\t\n\x05Image\x10\x04\"\xfe\x01\n\x06Stroke\x12\r\n\x05\x63olor\x18\x01 \x01(\r\x12\x0e\n\x06weight\x18\x02 \x01(\x02\x12\x1f\n\x0freference_point\x18\x03 \x01(\x0b\x32\x06.Point\x12\x15\n\x05point\x18\x04 \x03(\x0b\x32\x06.Point\x12\x16\n\x06\x62ounds\x18\x05 \x01(\x0b\x32\x06.RectF\x12\'\n\x0bstroke_type\x18\x06 \x01(\x0e\x32\x12.Stroke.StrokeType\x12\x1d\n\rfitted_bounds\x18\x07 \x01(\x0b\x32\x06.RectF\"=\n\nStrokeType\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04Line\x10\x02\x12\r\n\tHighlight\x10\x03\x12\n\n\x06Smooth\x10\x04\"/\n\x05Point\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\x10\n\x08pressure\x18\x03 \x01(\x02\"]\n\x05Shape\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.Shape.ShapeType\x12\x1a\n\x07\x65llipse\x18\xe8\x07 \x01(\x0b\x32\x08.Ellipse\"\x18\n\tShapeType\x12\x0b\n\x07\x45llipse\x10\x01\"\t\n\x07\x45llipse\"\\\n\x04Text\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05\x63olor\x18\x02 \x01(\r\x12\x0e\n\x06weight\x18\x03 \x01(\x02\x12\x16\n\x06\x62ounds\x18\x04 \x01(\x0b\x32\x06.RectF\x12\x0f\n\x07version\x18\x05 \x01(\x05\"\x8d\x01\n\x05Image\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nimage_hash\x18\x02 \x01(\t\x12\x16\n\x06\x62ounds\x18\x03 \x01(\x0b\x32\x06.RectF\x12\x0e\n\x06\x66lip_x\x18\x04 \x01(\x08\x12\x0e\n\x06\x66lip_y\x18\x05 \x01(\x08\x12\x1a\n\x0b\x63rop_bounds\x18\x06 \x01(\x0b\x32\x05.Rect\x12\x10\n\x08rotation\x18\x07 \x01(\x05')
+  syntax='proto2',
+  serialized_pb=_b('\n\rpapyrus.proto\">\n\x04Page\x12\x1f\n\nbackground\x18\x01 \x01(\x0b\x32\x0b.Background\x12\x15\n\x05layer\x18\x03 \x01(\x0b\x32\x06.Layer\"\x91\x03\n\nBackground\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.Background.Type\x12\r\n\x05width\x18\x04 \x01(\x02\x12\x0e\n\x06height\x18\x05 \x01(\x02\x12\r\n\x05\x63olor\x18\x06 \x01(\r\x12\x36\n\x16ruled_paper_background\x18\xe8\x07 \x01(\x0b\x32\x15.RuledPaperBackground\x12\x34\n\x15quad_paper_background\x18\xe9\x07 \x01(\x0b\x32\x14.QuadPaperBackground\x12+\n\x10\x62lank_background\x18\xea\x07 \x01(\x0b\x32\x10.BlankBackground\x12\'\n\x0epdf_background\x18\xeb\x07 \x01(\x0b\x32\x0e.PDFBackground\x12+\n\x10papyr_background\x18\xec\x07 \x01(\x0b\x32\x10.PapyrBackground\"D\n\x04Type\x12\x0e\n\nRuledPaper\x10\x01\x12\r\n\tQuadPaper\x10\x02\x12\t\n\x05\x42lank\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\t\n\x05Papyr\x10\x05\"\x16\n\x14RuledPaperBackground\"\x15\n\x13QuadPaperBackground\"\x11\n\x0f\x42lankBackground\"\x0f\n\rPDFBackground\"\x11\n\x0fPapyrBackground\"4\n\x05Layer\x12\x13\n\x04item\x18\x01 \x03(\x0b\x32\x05.Item\x12\x16\n\x06\x62ounds\x18\x02 \x01(\x0b\x32\x06.RectF\"@\n\x04Rect\x12\x0c\n\x04left\x18\x01 \x01(\x05\x12\r\n\x05right\x18\x02 \x01(\x05\x12\x0b\n\x03top\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x04 \x01(\x05\"A\n\x05RectF\x12\x0c\n\x04left\x18\x01 \x01(\x02\x12\r\n\x05right\x18\x02 \x01(\x02\x12\x0b\n\x03top\x18\x03 \x01(\x02\x12\x0e\n\x06\x62ottom\x18\x04 \x01(\x02\"\xb4\x01\n\x04Item\x12\x18\n\x04type\x18\x01 \x02(\x0e\x32\n.Item.Type\x12\x18\n\x06stroke\x18\xe8\x07 \x01(\x0b\x32\x07.Stroke\x12\x16\n\x05shape\x18\xe9\x07 \x01(\x0b\x32\x06.Shape\x12\x14\n\x04text\x18\xea\x07 \x01(\x0b\x32\x05.Text\x12\x16\n\x05image\x18\xeb\x07 \x01(\x0b\x32\x06.Image\"2\n\x04Type\x12\n\n\x06Stroke\x10\x01\x12\t\n\x05Shape\x10\x02\x12\x08\n\x04Text\x10\x03\x12\t\n\x05Image\x10\x04\"\xfe\x01\n\x06Stroke\x12\r\n\x05\x63olor\x18\x01 \x01(\r\x12\x0e\n\x06weight\x18\x02 \x01(\x02\x12\x1f\n\x0freference_point\x18\x03 \x01(\x0b\x32\x06.Point\x12\x15\n\x05point\x18\x04 \x03(\x0b\x32\x06.Point\x12\x16\n\x06\x62ounds\x18\x05 \x01(\x0b\x32\x06.RectF\x12\'\n\x0bstroke_type\x18\x06 \x01(\x0e\x32\x12.Stroke.StrokeType\x12\x1d\n\rfitted_bounds\x18\x07 \x01(\x0b\x32\x06.RectF\"=\n\nStrokeType\x12\n\n\x06Normal\x10\x01\x12\x08\n\x04Line\x10\x02\x12\r\n\tHighlight\x10\x03\x12\n\n\x06Smooth\x10\x04\"/\n\x05Point\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\x10\n\x08pressure\x18\x03 \x01(\x02\"]\n\x05Shape\x12\x1e\n\x04type\x18\x01 \x02(\x0e\x32\x10.Shape.ShapeType\x12\x1a\n\x07\x65llipse\x18\xe8\x07 \x01(\x0b\x32\x08.Ellipse\"\x18\n\tShapeType\x12\x0b\n\x07\x45llipse\x10\x01\"\xc8\x01\n\x07\x45llipse\x12\r\n\x05\x63olor\x18\x01 \x01(\x05\x12\x0e\n\x06weight\x18\x02 \x01(\x02\x12\x10\n\x08\x63\x65nter_x\x18\x03 \x01(\x02\x12\x10\n\x08\x63\x65nter_y\x18\x04 \x01(\x02\x12\x10\n\x08radius_x\x18\x05 \x01(\x02\x12\x10\n\x08radius_y\x18\x06 \x01(\x02\x12\x16\n\x06\x62ounds\x18\x07 \x01(\x0b\x32\x06.RectF\x12\x14\n\x04oval\x18\x08 \x01(\x0b\x32\x06.RectF\x12\x13\n\x0bstart_angle\x18\t \x01(\x02\x12\x13\n\x0bsweep_angle\x18\n \x01(\x02\"\\\n\x04Text\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05\x63olor\x18\x02 \x01(\r\x12\x0e\n\x06weight\x18\x03 \x01(\x02\x12\x16\n\x06\x62ounds\x18\x04 \x01(\x0b\x32\x06.RectF\x12\x0f\n\x07version\x18\x05 \x01(\x05\"\x8d\x01\n\x05Image\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nimage_hash\x18\x02 \x01(\t\x12\x16\n\x06\x62ounds\x18\x03 \x01(\x0b\x32\x06.RectF\x12\x0e\n\x06\x66lip_x\x18\x04 \x01(\x08\x12\x0e\n\x06\x66lip_y\x18\x05 \x01(\x08\x12\x1a\n\x0b\x63rop_bounds\x18\x06 \x01(\x0b\x32\x05.Rect\x12\x10\n\x08rotation\x18\x07 \x01(\x05')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -166,6 +166,7 @@ _PAGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -191,14 +192,14 @@ _BACKGROUND = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='width', full_name='Background.width', index=1,
       number=4, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='height', full_name='Background.height', index=2,
       number=5, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -253,6 +254,7 @@ _BACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -276,6 +278,7 @@ _RULEDPAPERBACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -299,6 +302,7 @@ _QUADPAPERBACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -322,6 +326,7 @@ _BLANKBACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -345,6 +350,7 @@ _PDFBACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -368,6 +374,7 @@ _PAPYRBACKGROUND = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -405,6 +412,7 @@ _LAYER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -456,6 +464,7 @@ _RECT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -474,28 +483,28 @@ _RECTF = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='left', full_name='RectF.left', index=0,
       number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='right', full_name='RectF.right', index=1,
       number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='top', full_name='RectF.top', index=2,
       number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='bottom', full_name='RectF.bottom', index=3,
       number=4, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -507,6 +516,7 @@ _RECTF = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -566,6 +576,7 @@ _ITEM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -591,7 +602,7 @@ _STROKE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='weight', full_name='Stroke.weight', index=1,
       number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -639,6 +650,7 @@ _STROKE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -657,21 +669,21 @@ _POINT = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='x', full_name='Point.x', index=0,
       number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='y', full_name='Point.y', index=1,
       number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='pressure', full_name='Point.pressure', index=2,
       number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -683,6 +695,7 @@ _POINT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -721,6 +734,7 @@ _SHAPE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -736,6 +750,76 @@ _ELLIPSE = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='color', full_name='Ellipse.color', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='weight', full_name='Ellipse.weight', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='center_x', full_name='Ellipse.center_x', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='center_y', full_name='Ellipse.center_y', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='radius_x', full_name='Ellipse.radius_x', index=4,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='radius_y', full_name='Ellipse.radius_y', index=5,
+      number=6, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bounds', full_name='Ellipse.bounds', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='oval', full_name='Ellipse.oval', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='start_angle', full_name='Ellipse.start_angle', index=8,
+      number=9, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sweep_angle', full_name='Ellipse.sweep_angle', index=9,
+      number=10, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -744,11 +828,12 @@ _ELLIPSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1345,
-  serialized_end=1354,
+  serialized_start=1359,
+  serialized_end=1559,
 )
 
 
@@ -776,7 +861,7 @@ _TEXT = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='weight', full_name='Text.weight', index=2,
       number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -802,11 +887,12 @@ _TEXT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1369,
-  serialized_end=1461,
+  serialized_start=1561,
+  serialized_end=1653,
 )
 
 
@@ -874,11 +960,12 @@ _IMAGE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1464,
-  serialized_end=1605,
+  serialized_start=1656,
+  serialized_end=1797,
 )
 
 _PAGE.fields_by_name['background'].message_type = _BACKGROUND
@@ -907,6 +994,8 @@ _STROKE_STROKETYPE.containing_type = _STROKE
 _SHAPE.fields_by_name['type'].enum_type = _SHAPE_SHAPETYPE
 _SHAPE.fields_by_name['ellipse'].message_type = _ELLIPSE
 _SHAPE_SHAPETYPE.containing_type = _SHAPE
+_ELLIPSE.fields_by_name['bounds'].message_type = _RECTF
+_ELLIPSE.fields_by_name['oval'].message_type = _RECTF
 _TEXT.fields_by_name['bounds'].message_type = _RECTF
 _IMAGE.fields_by_name['bounds'].message_type = _RECTF
 _IMAGE.fields_by_name['crop_bounds'].message_type = _RECT
@@ -927,6 +1016,7 @@ DESCRIPTOR.message_types_by_name['Shape'] = _SHAPE
 DESCRIPTOR.message_types_by_name['Ellipse'] = _ELLIPSE
 DESCRIPTOR.message_types_by_name['Text'] = _TEXT
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Page = _reflection.GeneratedProtocolMessageType('Page', (_message.Message,), dict(
   DESCRIPTOR = _PAGE,
