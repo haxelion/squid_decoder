@@ -21,14 +21,12 @@ those reversed java files.
 
 ## Limitations
 
-Only the stroke part of the format (which is also used by the rectangle and line tools) is fully 
-reversed because so far that's the only part I care about. The following features are not reversed 
-engineered:
+So far the stroke part of the format (which is also used by the rectangle and line tools) and, 
+thanks to [Denys Vitali](https://github.com/denysvitali), the ellipses and text are fully reversed. 
+The following features are not reversed engineered:
 
 * Paper background
 * PDF background
-* Ellipse tool
-* Text tool
 * Image tool
 
 Feel free to open an issue if you need it and encourage me to reverse engineer it. Or send a pull 
