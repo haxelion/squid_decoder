@@ -106,7 +106,16 @@ message Shape {
 }
 
 message Ellipse {
-    // TODO
+    optional int32    color        = 1;
+    optional float    weight       = 2;
+    optional float    center_x     = 3;
+    optional float    center_y     = 4;
+    optional float    radius_x     = 5;
+    optional float    radius_y     = 6;
+    optional RectF    bounds       = 7;
+    optional RectF    oval         = 8;
+    optional float    start_angle  = 9;
+    optional float    sweep_angle  = 10;
 }
 
 message Text {
