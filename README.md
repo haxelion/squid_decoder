@@ -1,5 +1,7 @@
 # Squid Decoder
 
+**There is a much more awesome version made by Denis Vitaly available [on his github](https://github.com/denysvitali/squid_decoder)**
+
 I reversed engineered part of [Squid (ex Papyrus) application](http://squidnotes.com/) page storage 
 format which is based on [Google Protocol Buffers](https://developers.google.com/protocol-buffers/). 
 I rewrote part of the format `.proto` file and wrote a demonstration script which uses protobuf and 
